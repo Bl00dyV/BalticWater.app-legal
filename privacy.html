@@ -1,0 +1,284 @@
+<title>Privacy Policy — Baltic Water Temperature</title>
+<style>
+  :root {
+    --bg: #f4f7f8;
+    --surface: #eaf0f2;
+    --surface-line: #d8e2e5;
+    --text: #0f232e;
+    --text-muted: #4c6472;
+    --accent: #157a99;
+    --accent-soft: #dcedf2;
+    --mono-ink: #35545f;
+    --shadow: 0 1px 2px rgba(15, 35, 46, 0.06);
+  }
+  :root[data-theme="dark"] {
+    --bg: #071522;
+    --surface: #0d2438;
+    --surface-line: #1c3a4d;
+    --text: #dfeaf0;
+    --text-muted: #90aabb;
+    --accent: #5fd6f2;
+    --accent-soft: #123246;
+    --mono-ink: #8fc4d6;
+    --shadow: none;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #071522;
+      --surface: #0d2438;
+      --surface-line: #1c3a4d;
+      --text: #dfeaf0;
+      --text-muted: #90aabb;
+      --accent: #5fd6f2;
+      --accent-soft: #123246;
+      --mono-ink: #8fc4d6;
+      --shadow: none;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: ui-serif, "New York", Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  header.doc-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 56px;
+  }
+  .mark {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 32% 28%, var(--accent-soft), transparent 70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mark svg { width: 22px; height: 22px; }
+  .brand {
+    font-family: ui-sans-serif, -apple-system, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.01em;
+    color: var(--text-muted);
+  }
+  h1 {
+    font-family: ui-sans-serif, -apple-system, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    font-size: clamp(32px, 5vw, 42px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .meta {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--mono-ink);
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .lede {
+    background: var(--surface);
+    border: 1px solid var(--surface-line);
+    border-radius: 14px;
+    padding: 22px 24px;
+    margin-bottom: 48px;
+    font-size: 16px;
+  }
+  .lede p { margin: 0; }
+  .lede p + p { margin-top: 12px; }
+  .lede strong { color: var(--text); }
+
+  nav.toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin-bottom: 56px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--surface-line);
+    font-family: ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+  }
+  nav.toc a {
+    color: var(--text-muted);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  nav.toc a:hover, nav.toc a:focus-visible {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  section { margin-bottom: 44px; scroll-margin-top: 24px; }
+  section:last-of-type { margin-bottom: 0; }
+  h2 {
+    font-family: ui-sans-serif, -apple-system, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 21px;
+    letter-spacing: -0.005em;
+    margin: 0 0 14px;
+    text-wrap: balance;
+  }
+  p { margin: 0 0 14px; color: var(--text); }
+  p:last-child { margin-bottom: 0; }
+  .muted { color: var(--text-muted); }
+
+  ul.sources {
+    list-style: none;
+    margin: 0 0 14px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  ul.sources li {
+    display: grid;
+    grid-template-columns: minmax(120px, 190px) 1fr;
+    gap: 4px 16px;
+    padding: 12px 14px;
+    background: var(--surface);
+    border: 1px solid var(--surface-line);
+    border-radius: 10px;
+    align-items: baseline;
+  }
+  ul.sources .name {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  ul.sources .desc {
+    font-family: ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    font-size: 14.5px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  @media (max-width: 520px) {
+    ul.sources li { grid-template-columns: 1fr; }
+  }
+
+  a.contact {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+  }
+  a.contact:hover { opacity: 0.8; }
+
+  footer {
+    margin-top: 72px;
+    padding-top: 28px;
+    border-top: 1px solid var(--surface-line);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-family: ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    font-size: 13.5px;
+    color: var(--text-muted);
+  }
+  footer a { color: var(--text-muted); }
+  footer a:hover { color: var(--accent); }
+</style>
+
+<div class="page">
+  <header class="doc-header">
+    <div class="mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C12 2 5 11.2 5 15.5C5 19.09 8.13 22 12 22C15.87 22 19 19.09 19 15.5C19 11.2 12 2 12 2Z" fill="var(--accent)"/>
+      </svg>
+    </div>
+    <div>
+      <div class="brand">BALTIC WATER TEMPERATURE</div>
+      <h1>Privacy Policy</h1>
+    </div>
+    <div class="meta">
+      <span>Effective 6 August 2026</span>
+      <span>Version 1.0</span>
+      <span>Vadim Petruska</span>
+    </div>
+  </header>
+
+  <div class="lede">
+    <p><strong>In one sentence:</strong> the app collects nothing. There is no account, no analytics, no advertising, and nothing about you is ever sent anywhere — the only network traffic is anonymous requests for public sea-temperature data and beach photographs.</p>
+    <p>The rest of this page explains exactly what that means, in the detail Apple and the App Store ask us to spell out.</p>
+  </div>
+
+  <nav class="toc" aria-label="Sections">
+    <a href="#local">What stays on your device</a>
+    <a href="#network">What goes over the network</a>
+    <a href="#no-tracking">No tracking, ever</a>
+    <a href="#children">Children</a>
+    <a href="#changes">Changes</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="local">
+    <h2>What stays on your device</h2>
+    <p>Baltic Water Temperature has no login and no user account — there is nothing to identify you by. The app saves a handful of preferences locally, using Apple's standard on-device settings storage (<code>UserDefaults</code>):</p>
+    <p class="muted">Your chosen language · whether sound effects are on · your chosen app icon (Classic, Cold, Warm, or Automatic) · whether you've completed the welcome screen · whether you've accepted the End-User License Agreement · which sections you left expanded or collapsed.</p>
+    <p>None of this ever leaves your device. It isn't backed up to any server we run, because we don't run one.</p>
+  </section>
+
+  <section id="network">
+    <h2>What goes over the network</h2>
+    <p>To show a temperature, the app has to ask someone who measures it. Every request below is anonymous — it carries your coordinates of interest (a city or beach on the Baltic coast) and nothing that identifies you personally: no account ID, no advertising ID, no device fingerprint.</p>
+    <ul class="sources">
+      <li><span class="name">Open&#8209;Meteo Marine</span><span class="desc">Ocean model based on Copernicus Marine / ECMWF data</span></li>
+      <li><span class="name">NASA&nbsp;JPL&nbsp;MUR&nbsp;SST</span><span class="desc">Multi-satellite sea-surface-temperature analysis, 1&nbsp;km grid</span></li>
+      <li><span class="name">NOAA&nbsp;OISST&nbsp;v2.1</span><span class="desc">Optimum interpolation from satellites, ships and buoys, 25&nbsp;km</span></li>
+      <li><span class="name">NOAA Geo&#8209;Polar Blended</span><span class="desc">CoastWatch blended geostationary + polar satellite analysis, 5&nbsp;km</span></li>
+      <li><span class="name">SMHI</span><span class="desc">Swedish Meteorological and Hydrological Institute, coastal observations</span></li>
+      <li><span class="name">FMI</span><span class="desc">Finnish Meteorological Institute, mareograph stations</span></li>
+      <li><span class="name">IMGW&#8209;PIB</span><span class="desc">Polish Institute of Meteorology, coastal hydrological gauges</span></li>
+    </ul>
+    <p>Beach photographs are fetched from <strong>Wikimedia Commons</strong>, a public, freely-licensed image archive; each photo is shown with its author and license as supplied by Commons. Map tiles are drawn by Apple's own MapKit, under Apple's Maps privacy terms, not ours.</p>
+    <p class="muted">Each of these providers is an independent organisation with its own systems and its own privacy practices for the raw traffic that reaches their servers (standard web request metadata such as IP address). We don't control that traffic once it leaves the app, and we never receive it ourselves — it goes directly from your device to theirs.</p>
+  </section>
+
+  <section id="no-tracking">
+    <h2>No tracking, ever</h2>
+    <p>There is no analytics software in this app, no advertising network, no crash-reporting service, and no third-party SDK of any kind. We don't know how many people use the app, what they tap, or how long they stay — Apple's own aggregate, anonymous App Store metrics are the only numbers we ever see, and those never identify an individual.</p>
+    <p>The app does not request access to your location, camera, microphone, contacts, or photo library. It has none of the permissions that would make tracking possible in the first place.</p>
+  </section>
+
+  <section id="children">
+    <h2>Children</h2>
+    <p>Because the app collects no personal data from anyone, it collects none from children either. Baltic Water Temperature is rated for a general audience and contains no content requiring an age gate.</p>
+  </section>
+
+  <section id="changes">
+    <h2>Changes to this policy</h2>
+    <p>If this policy ever changes — for instance, if a future version adds a genuinely new capability — the version number and effective date at the top of this page will change with it, and the update will ship alongside the app version that needs it.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Baltic Water Temperature is written and maintained by one person. Questions, concerns, or requests about this policy can go straight to <a class="contact" href="mailto:vadja222@me.com">vadja222@me.com</a>.</p>
+  </section>
+
+  <footer>
+    <span>© 2026 Vadim Petruska. All rights reserved.</span>
+    <span><a href="support.html">Support</a></span>
+  </footer>
+</div>

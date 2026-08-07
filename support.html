@@ -1,0 +1,237 @@
+<title>Support — Baltic Water Temperature</title>
+<style>
+  :root {
+    --bg: #f4f7f8;
+    --surface: #eaf0f2;
+    --surface-line: #d8e2e5;
+    --text: #0f232e;
+    --text-muted: #4c6472;
+    --accent: #157a99;
+    --accent-soft: #dcedf2;
+    --mono-ink: #35545f;
+  }
+  :root[data-theme="dark"] {
+    --bg: #071522;
+    --surface: #0d2438;
+    --surface-line: #1c3a4d;
+    --text: #dfeaf0;
+    --text-muted: #90aabb;
+    --accent: #5fd6f2;
+    --accent-soft: #123246;
+    --mono-ink: #8fc4d6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #071522;
+      --surface: #0d2438;
+      --surface-line: #1c3a4d;
+      --text: #dfeaf0;
+      --text-muted: #90aabb;
+      --accent: #5fd6f2;
+      --accent-soft: #123246;
+      --mono-ink: #8fc4d6;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: ui-serif, "New York", Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  header.doc-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 48px;
+  }
+  .mark {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 32% 28%, var(--accent-soft), transparent 70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mark svg { width: 22px; height: 22px; }
+  .brand {
+    font-family: ui-sans-serif, -apple-system, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.01em;
+    color: var(--text-muted);
+  }
+  h1 {
+    font-family: ui-sans-serif, -apple-system, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    font-size: clamp(32px, 5vw, 42px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .sub {
+    font-size: 16px;
+    color: var(--text-muted);
+    max-width: 46ch;
+  }
+
+  .contact-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    background: var(--surface);
+    border: 1px solid var(--surface-line);
+    border-radius: 14px;
+    padding: 22px 24px;
+    margin-bottom: 56px;
+  }
+  .contact-card .label {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--mono-ink);
+    margin-bottom: 6px;
+  }
+  .contact-card a.email {
+    font-family: ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .contact-card a.email:hover { opacity: 0.85; }
+  .contact-card .reply-time {
+    font-family: ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    font-size: 13.5px;
+    color: var(--text-muted);
+  }
+
+  section { margin-bottom: 44px; }
+  section:last-of-type { margin-bottom: 0; }
+  h2 {
+    font-family: ui-sans-serif, -apple-system, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 21px;
+    letter-spacing: -0.005em;
+    margin: 0 0 18px;
+  }
+
+  .faq { display: flex; flex-direction: column; gap: 22px; }
+  .faq dt {
+    font-family: ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  .faq dd { margin: 0; color: var(--text-muted); }
+
+  .langs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    font-size: 13.5px;
+  }
+  .langs span {
+    background: var(--surface);
+    border: 1px solid var(--surface-line);
+    border-radius: 999px;
+    padding: 5px 12px;
+    color: var(--text-muted);
+  }
+
+  footer {
+    margin-top: 72px;
+    padding-top: 28px;
+    border-top: 1px solid var(--surface-line);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-family: ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    font-size: 13.5px;
+    color: var(--text-muted);
+  }
+  footer a { color: var(--text-muted); }
+  footer a:hover { color: var(--accent); }
+</style>
+
+<div class="page">
+  <header class="doc-header">
+    <div class="mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C12 2 5 11.2 5 15.5C5 19.09 8.13 22 12 22C15.87 22 19 19.09 19 15.5C19 11.2 12 2 12 2Z" fill="var(--accent)"/>
+      </svg>
+    </div>
+    <div>
+      <div class="brand">BALTIC WATER TEMPERATURE</div>
+      <h1>Support</h1>
+    </div>
+    <p class="sub">Sea-water temperature for 27 cities on the Baltic coast, averaged from seven independent sources. One person builds and maintains it — here's how to reach him.</p>
+  </header>
+
+  <div class="contact-card">
+    <div>
+      <div class="label">Email</div>
+      <a class="email" href="mailto:vadja222@me.com">vadja222@me.com</a>
+    </div>
+    <div class="reply-time">Usually within a few days</div>
+  </div>
+
+  <section>
+    <h2>Common questions</h2>
+    <dl class="faq">
+      <div>
+        <dt>Why does a city only show "5 of 7 sources reporting"?</dt>
+        <dd>Not every source has a station near every city, and satellite analyses publish on their own schedule — some update daily, others every one to fourteen days. The average shown is calculated only from whichever sources have current data at that moment; the app never invents a number.</dd>
+      </div>
+      <div>
+        <dt>The app seems stuck loading — what's wrong?</dt>
+        <dd>Every reading is fetched live from public meteorological services when you open a city, so a slow or offline connection is almost always the cause. Pull down or tap the refresh icon to try again once you're back online.</dd>
+      </div>
+      <div>
+        <dt>Where does the 10-day forecast come from?</dt>
+        <dd>From Open-Meteo Marine's ocean model — the only one of the seven sources that predicts rather than measures. Satellites and coastal stations report what the water is doing right now, not what it will do next week.</dd>
+      </div>
+      <div>
+        <dt>Can I use the app without accepting the license agreement?</dt>
+        <dd>No — it's shown once, on first launch, and needs to be accepted to continue. You can reread it any time afterwards from Settings &amp; About.</dd>
+      </div>
+      <div>
+        <dt>Does the app work offline?</dt>
+        <dd>The map and interface open without a connection, but every temperature, chart, and beach photo needs the network to load, since none of it is bundled with the app.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Languages</h2>
+    <p style="margin: 0 0 14px; color: var(--text-muted);">The app is fully translated, interface and legal text alike, into:</p>
+    <div class="langs">
+      <span>English</span><span>Русский</span><span>Deutsch</span><span>Polski</span>
+      <span>Lietuvių</span><span>Latviešu</span><span>Suomi</span><span>Svenska</span><span>Nederlands</span>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Vadim Petruska. All rights reserved.</span>
+    <span><a href="privacy.html">Privacy Policy</a></span>
+  </footer>
+</div>
